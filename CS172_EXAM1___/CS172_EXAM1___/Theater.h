@@ -23,5 +23,6 @@ public:
 private:
 	int PopPrice;
 	int CokePrice;
+	string Movie;
 
 };
