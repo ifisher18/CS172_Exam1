@@ -9,25 +9,31 @@
 //////////////////
 
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 #include "Movie.h"
 #include "Theater.h"
 using namespace std;
+
+
 int main()
 {
-	const int MOVIECOUNT = 11;
-	Movie movieListing[] = {
-		Movie("Bull Durham", "Comedy", 0), Movie("Ocean's Eleven", "Action", 2),
-		Movie("Monte Python's Meaning of Life", "Comedy", 5), Movie("Jaws", "Horror", 7),
-		Movie("Fletch", "Comedy", 10), Movie("Usual Suspects", "Action", 12),
-		Movie("Bull Durham", "Comedy", 14), Movie("Ocean's Eleven", "Action", 16),
-		Movie("Monte Python's Meaning of Life", "Comedy", 19), Movie("Jaws", "Horror", 21),
-		Movie("Usual Suspects", "Action", 23),
+	const int MOVIECOUNT = 11; // sets moviecount to 11
+	Movie movieListing[] = { // creates an array that inputs the name of movie, the genre of movie, and the showtime
+		Movie("Bull Durham", "Comedy", 0), Movie("Ocean's Eleven", "Action", 2), // array
+		Movie("Monte Python's Meaning of Life", "Comedy", 5), Movie("Jaws", "Horror", 7), // array
+		Movie("Fletch", "Comedy", 10), Movie("Usual Suspects", "Action", 12), // array
+		Movie("Bull Durham", "Comedy", 14), Movie("Ocean's Eleven", "Action", 16), // array
+		Movie("Monte Python's Meaning of Life", "Comedy", 19), Movie("Jaws", "Horror", 21), // array
+		Movie("Usual Suspects", "Action", 23), // array
 	};
-	Theater garland("The Garland", "509-327-2509");
+	Theater garland("The Garland", "509-327-2509"); // Creates an array that includes the name of theatre and tele. number
 	for (int m = 0; m < MOVIECOUNT; m++) {
-		garland.AddMovie(movieListing[m]);
+		garland.AddMovie(movieListing[m]); // for loop that adds movies to the listing based on how many movies there are to add
 	}
-	int errors = 0;
+
+	// test program to make sure variables and functions are passing correctly
+	int errors = 0; // sets errors to 0
 	if (garland.GetMovieForHour(-1) != "") {
 		errors++;
 		cout << "error: not handling -1 correctly\n";
@@ -44,6 +50,6 @@ int main()
 		errors++;
 		cout << "error: incorrect Comedy\n";
 	}
-	if (errors == 0) cout << "Passed\n";
-	else cout << "Errors: " << errors << endl;
+	if (errors == 0) cout << "Passed\n"; // this is the correct output
+	else cout << "Errors: " << errors << endl; // outputs the incremented number of errors
 }

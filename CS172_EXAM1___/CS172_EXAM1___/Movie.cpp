@@ -6,16 +6,19 @@
 #include <string>
 #include <cstdlib>
 #include "Movie.h"
+#include "Theater.h"
 using namespace std;
 
 //Come up with a default movie for your theater
 Movie::Movie() {
-
+	Title = "Finding Nemo";
+	Genre = "Comedy";
+	ShowTime = 8;
 }
 // for Genre, only Action, Comedy, Horror, and Documentary. If none of those,
 // default to Comedy
 Movie::Movie(string Title, string Genre, int ShowTime) {
-
+	
 }
 
 string Movie::GetTitle() { // Returns the movie title

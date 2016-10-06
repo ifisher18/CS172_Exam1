@@ -19,6 +19,9 @@ public:
 	int GetShowTimeForGenre(string Genre);//When will the movie of the given genre be shown?
 										  // Return -1 if none exist
 	int GetPopcornPrice(); //Make up a cost in dollars 
+	int GetCokePrice();// make up a cost on Coke
 private:
-	string Movie;
+	int PopPrice;
+	int CokePrice;
+
 };
