@@ -14,12 +14,21 @@ Theater::Theater(string Name, string Phone) { //The name for this theater
 	Name = "The Garland"; // the name of the theatre
 	Phone = "509-327-2509"; // a phone number to reach the theatre
 }
-void Theater::AddMovie(Movie& Movie) { //Add a movie at a specific time
-	for (int h = 0; )
-		// FINISH!!
+
+void AddMovie(Movie& Movie) { //Add a movie at a specific time
+	// while the below code may not compile, the logic of what I am doing is that in order to add a movie given a time, you need an incrementor that keeps track of what each showtime is
+	const int MOVIECOUNT = 11;
+	int showtime;
+	for (int h = 0; h > MOVIECOUNT; h++) {
+		if (Hour == showtime) {// based on the specific showtime, this if statement checks if Hour is at the right time to add movie
+			Movie++; // adds a movie given the specific time above
+		}
+		
+	}
 
 }
 string Theater::GetMovieForHour(int Hour) { //Return the movie shown at or after the given hour
+	// the below code checks to see if the given showtimes match with the movie titles. If this is the case, then each if statement returns the correct movie title
 	if (Hour == 0 || Hour == 14) { // series of if statements that returns title of movie based on the hour that it is playing
 		return "Bull Durham";
 	}
@@ -42,7 +51,8 @@ string Theater::GetMovieForHour(int Hour) { //Return the movie shown at or after
 }
 								  // Return "" if none are upcoming
 int Theater::GetShowTimeForGenre(string Genre) { //When will the movie of the given genre be shown?
-	for (int i = 0; i > size.movielisting; i++) {
+	// This function takes into account the Genre of the movie as well as at what time the given genre will be shown
+	for (int i = 0; i > 4;i++) {//size.movielisting; i++) {
 		if (Genre == "Comedy") {
 			return 0;
 		}
@@ -59,6 +69,7 @@ int Theater::GetShowTimeForGenre(string Genre) { //When will the movie of the gi
 // functions that get the price of popcorn and Coke
 									  // Return -1 if none exist
 int Theater::GetPopcornPrice() { //Make up a cost in dollars 
+	// this function takes into account the popcorn price as a 'get' function and returns value based on the number of popcorns ordered
 	int numPop;
 	if (numPop <= 0) {
 		return -1;
@@ -69,5 +80,6 @@ int Theater::GetPopcornPrice() { //Make up a cost in dollars
 }
 
 int Theater::GetCokePrice() { // make up a cost on Coke
+	// Same idea with this function, except with Coke and not popcorn
 	return CokePrice; // returns the price of Coke
 }

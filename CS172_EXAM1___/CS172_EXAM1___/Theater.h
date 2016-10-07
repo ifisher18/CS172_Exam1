@@ -8,9 +8,12 @@
 #include <ctime>
 #include <string>
 
+
 using namespace std;
 
-class Theater {
+
+class Theater { // class named Theater
+// this header file is used to define the class as well as to define each function that will be used. Although AddMovie appears to have an error (function is not defined), the general idea is that this area is used to define elements of the class.
 public:
 	Theater(string Name, string Phone); //The name for this theater
 	void AddMovie(Movie& Movie); //Add a movie at a specific time
@@ -24,4 +27,5 @@ private:
 	int PopPrice; // private variable since only pertains to a certain portion of the class, shouldn't be accessed freely
 	int CokePrice; // private variable since ''       ' '                      ''              ''       ''
 	string Movie; // test private variable
+	
 };
