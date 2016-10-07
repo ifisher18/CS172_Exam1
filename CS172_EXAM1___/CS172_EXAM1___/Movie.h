@@ -6,6 +6,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <string>
 using namespace std;
 
 class Movie {
@@ -25,5 +26,5 @@ private:
 	string Title; // private variable since each Title is different
 	string Genre; // private since each Genre is seperate and is called seperate
 	int ShowTime; // private since each ShowTime is specific to an object
-	string movietitlecheck;
+	string movietitlecheck; // variable that helps check what title is?
 };
