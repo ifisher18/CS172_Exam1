@@ -1,7 +1,7 @@
 //I affirm that all code given below was written solely by me, Ian , and that any help I received
 //adhered to the rules stated for this exam.
 
-#pragma once
+#pragma once // used to prevent multiple inclusions of the same header file (avoids mix-ups)
 
 #include <iostream>
 #include <cstdlib>
@@ -21,8 +21,7 @@ public:
 	int GetPopcornPrice(); //Make up a cost in dollars 
 	int GetCokePrice();// make up a cost on Coke
 private:
-	int PopPrice;
-	int CokePrice;
-	string Movie;
-
+	int PopPrice; // private variable since only pertains to a certain portion of the class, shouldn't be accessed freely
+	int CokePrice; // private variable since ''       ' '                      ''              ''       ''
+	string Movie; // test private variable
 };
